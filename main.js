@@ -1,4 +1,10 @@
-const { app, BrowserWindow, desktopCapturer, session } = require('electron');
+const {
+  app,
+  BrowserWindow,
+  desktopCapturer,
+  session,
+  clipboard,
+} = require('electron');
 const fs = require('fs');
 const path = require('path');
 const os = require('os');
@@ -43,7 +49,7 @@ app.whenReady().then(() => {
             }
             if (stats.isFile()) {
               console.log(`New screenshot detected: ${filename}`);
-              // You can add additional logic here to handle the new screenshot
+              clipboard.writeText(filename);
             }
           });
         }
