@@ -10,5 +10,8 @@
   "license": "ISC",
   "devDependencies": {
     "electron": "^32.0.1"
+  },
+  "dependencies": {
+    "tesseract.js": "^5.1.1"
   }
 }
